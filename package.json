@@ -3,15 +3,19 @@
   "version": "0.0.1",
   "description": "A tool for your band",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "babel-tape-runner tests/**/*.js | faucet",
     "build": "npm run build:client && npm run build:server",
     "build:client": "browserify client.js -t babelify --outfile meteor_core/client/client.js",
     "build:server": "browserify server.js -t babelify --outfile meteor_core/server/server.js",
     "watch": "nodemon --ext js,jsx --exec 'npm run build' --ignore meteor_core"
   },
   "devDependencies": {
+    "babel-tape-runner": "^1.2.0",
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
-    "nodemon": "^1.7.1"
+    "faucet": "0.0.1",
+    "nodemon": "^1.7.1",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.1"
   }
 }
