@@ -42,3 +42,5 @@ tape('transpose - 1', (test) => {
   test.equal(transpose('G#', -1), 'G', 'G# down 1 => G')
   test.equal(transpose('Ab', -1), 'G', 'Ab down 1 => G')
 })
+
+// TODO test other steps (+2, +3, -2, -3)
